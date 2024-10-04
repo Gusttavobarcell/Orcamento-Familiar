@@ -111,29 +111,31 @@ def relat():
             despesas_maiores_saldo.append((nome, valor))
 
     if despesa_total > sum(valor_receita):
-        relatorio_formatado += "Suas despesas estão maiores que a receita.\n"
-    
+        relatorio_formatado += "Suas despesas estão maiores que a sua receita!\n"
+
+
     if despesas_acima_300:
-        relatorio_formatado += "Despesas acima de R$300:\n"
+        relatorio_formatado += "Despesas acima de R$300! Tente economizar na área:\n"
         for nome, valor in despesas_acima_300:
             relatorio_formatado += f"  {nome}: R${valor:.2f}\n"
 
+
     if despesas_maiores_saldo:
-        relatorio_formatado += "Despesas que excedem o saldo atual:\n"
+        relatorio_formatado += "Suas despesas estão maiores que o saldo atual!\n"
         for nome, valor in despesas_maiores_saldo:
-            relatorio_formatado += f"  {nome}: R${valor:.2f}\n"
+            relatorio_formatado += f"  {nome}: R$-{valor:.2f}\n"
 
     if relatorio_formatado:
         messagebox.showinfo("Relatório", relatorio_formatado)
     else:
-        messagebox.showinfo("Relatório", "Nenhum problema identificado nas suas despesas.")
+        messagebox.showinfo("Relatório", "Nenhum problema relacionado as suas despesas foi identificado.")
 
 # Configuração da tela principal
 janela = tk.Tk()
 janela.title("Orçamento Familiar")
 janela.geometry("750x320")
 janela.configure(background="#1A434E")
-janela.iconbitmap("assents\ygona.ico")
+# janela.iconbitmap("assents\ygona.ico")
 janela.resizable(False, False)
 
 

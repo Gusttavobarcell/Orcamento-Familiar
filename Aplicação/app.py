@@ -136,6 +136,7 @@ janela.configure(background="#1A434E")
 janela.iconbitmap("assents\ygona.ico")
 janela.resizable(False, False)
 
+
 # style para os botões na tela principal
 style_botão_receita = {
      "bg": "#8EBEF1",  

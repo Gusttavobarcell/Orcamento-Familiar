@@ -135,7 +135,7 @@ janela = tk.Tk()
 janela.title("Orçamento Familiar")
 janela.geometry("750x320")
 janela.configure(background="#1A434E")
-# janela.iconbitmap("assents\ygona.ico")
+janela.iconbitmap("assents\ygona.ico")
 janela.resizable(False, False)
 
 
